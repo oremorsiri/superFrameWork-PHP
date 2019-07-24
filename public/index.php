@@ -1,6 +1,6 @@
-<?php 
+<?php
 
 require_once dirname(__DIR__).'/vendor/autoload.php';
-use App\Kernel;
+use App\kernel;
 
-$kernel= new Kernel();
+$kernel = new Kernel();
