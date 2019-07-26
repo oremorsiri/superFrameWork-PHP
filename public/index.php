@@ -1,7 +1,7 @@
 <?php
+require_once dirname(__DIR__).'/vendor/autoload.php';//3. el index lo que hace es cargar el autoload y cargar el kernel
 
-require_once dirname(__DIR__).'/vendor/autoload.php';
 use App\kernel;
 
 $kernel = new Kernel();
-kint::dump($kernel);
+$kernel -> init();

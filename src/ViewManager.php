@@ -19,7 +19,6 @@ class ViewManager{
         if($args != null){
             extract ($args, EXTR_SKIP);
         }
-
         $file= dirname(__DIR__).'/templates'.$view;
         if(is_readable($file)){
             require $file;

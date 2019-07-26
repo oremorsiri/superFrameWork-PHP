@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -11,7 +10,9 @@ class LogManager
     public function __construct()
     {
         $this->logger = new Logger("App");
-        $this->logger->pushHandler(new StreamHandler(dirname(__DIR__).'/cache/logs/dev.log'));
+        $this->logger->pushHandler(
+            new StreamHandler(dirname(__DIR__).'/cache/logs/dev.log'));
+    
     }
 
     public function info(string $message)
@@ -28,7 +29,7 @@ class LogManager
     {
         $this->logger->error($message);
     }
-
+    
     public function getLogger():Logger{
         return $this->logger;
     }
