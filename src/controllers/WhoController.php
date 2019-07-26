@@ -1,13 +1,11 @@
-    
-<?php
+<?php 
 
 namespace App\controllers;
 
 use App\ViewManager;
 
-class WhoController{
+class WhoController extends Controller {
     public function index(){
-        $viewManager = new ViewManager();
-        $viewManager->renderTemplate('who.twig.html');
+        $this ->viewManager->renderTemplate('who.twig.html');
     }
 }
