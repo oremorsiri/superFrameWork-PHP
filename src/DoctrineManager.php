@@ -18,6 +18,6 @@ class DoctrineManager {
         $config=
         Setup::createAnnotationMetadataConfiguration($paths, $isDevmode, null, null, false);
         AnnotationRegistry::registerLoader('class_exists');
-        $this->em= EntityManager::create($dbconfig, $config);
+        $this-> em = EntityManager::create($dbconfig, $config);
     }
 };

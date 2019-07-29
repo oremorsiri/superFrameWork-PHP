@@ -47,7 +47,7 @@ class __TwigTemplate_78dea6878fa8b82be5ed920f4bbdb1d570365a7c05787311222e93be7e3
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Aquí una lista de usuarios</h1>
+        echo "    <h1>Hola Posts</h1>
 ";
     }
 
