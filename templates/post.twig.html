@@ -1,5 +1,15 @@
 {% extends "template.twig.html" %}
-    
+
 {% block body %}
-    <h1>Hola Posts</h1>
+
+    {% for posts in post %}
+    
+    <div>
+        <h1>{{posts.titulo}}</h1>
+        <h5>{{posts.descripcion}}</h5>
+        <h6>Posted on {{posts.created_at|date('d-m-Y')}} by {{posts.autor}}</h6>
+    </div>
+
+    {% endfor %}
+
 {% endblock %}

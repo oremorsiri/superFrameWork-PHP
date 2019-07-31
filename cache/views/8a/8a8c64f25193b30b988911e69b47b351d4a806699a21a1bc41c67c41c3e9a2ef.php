@@ -47,7 +47,36 @@ class __TwigTemplate_81ccbf7ece24adb719420dc7cb893934c57f929022f70a364f5f84c14d7
     {
         $macros = $this->macros;
         // line 4
-        echo "    <h1>Hola Users</h1>
+        echo "
+    ";
+        // line 5
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["users"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
+            // line 6
+            echo "    
+    <div>
+        <h1>";
+            // line 8
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "name", [], "any", false, false, false, 8), "html", null, true);
+            echo "</h1>
+        <h5>";
+            // line 9
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 9), "html", null, true);
+            echo "</h5>
+        <h6>";
+            // line 10
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "created_at", [], "any", false, false, false, 10), "d-m-Y"), "html", null, true);
+            echo "</h6>
+    </div>
+
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 14
+        echo "
 ";
     }
 
@@ -63,7 +92,7 @@ class __TwigTemplate_81ccbf7ece24adb719420dc7cb893934c57f929022f70a364f5f84c14d7
 
     public function getDebugInfo()
     {
-        return array (  50 => 4,  46 => 3,  35 => 1,);
+        return array (  79 => 14,  69 => 10,  65 => 9,  61 => 8,  57 => 6,  53 => 5,  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
